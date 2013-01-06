@@ -1,7 +1,8 @@
 " Vim syntax file
 " Language:     OpenCL (Open Computing Language)
-" Maintainer:   Terence Ou (rivan_@msn.com)
-" Last Change:  19-July-2010
+" Developer:    Terence Ou (rivan_@msn.com)
+" Maintainer:   Norman Heino (norman.heino@gmail.com)
+" Last Change:  2013-01-06
 
 if version < 600
   syntax clear
@@ -17,7 +18,7 @@ else
 endif
 
 " address space qualifiers
-syn keyword clStorageClass      global __global local __local constant __constant private __private
+syn keyword clStorageClass      global __global local __local constant __constant private __private extern __extern static __static
 " function qualifiers
 syn keyword clStorageClass      kernel __kernel  __attribute__
 syn keyword clStorageClass      read_only __read_only write_only __write_only
@@ -41,7 +42,7 @@ syn keyword clType              half2 half3 half4 half8 half16
 
 " other types
 syn keyword clType              ptrdiff_t intptr_t uintptr_t
-syn keyword clType              image2d_t image3d_t sampler_t event_t
+syn keyword clType              image1d_t image1d_array_t image2d_t image2d_array_t image3d_t sampler_t event_t
 
 " reserved types
 syn keyword clType              bool2 bool3 bool4 bool8 bool16
@@ -98,7 +99,7 @@ syn keyword clFunction          clamp degrees max min mix radians step smoothste
 syn keyword clFunction          cross dot distance length normalize fast_distance fast_length fast_normalize
 
 " miscellaneous vector functions
-syn keyword clFunction          vec_step shuffle shuffle2
+syn keyword clFunction          vec_step shuffle shuffle2 popcount
 
 " relational functions
 syn keyword clFunction          isequal isnotequal isgreater isgreaterequal isless islessequal islessgreater isfinite isinf isnan isnormal isordered isunordered signbit any all bitselect select
