@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language:	OpenCL (Open Computing Language)
-" Maintainer:	Terence Ou (rivan_@msn.com)
-" Last Change:	19-July-2010
+" Language:     OpenCL (Open Computing Language)
+" Maintainer:   Terence Ou (rivan_@msn.com)
+" Last Change:  19-July-2010
 
 if version < 600
   syntax clear
@@ -17,7 +17,7 @@ else
 endif
 
 " address space qualifiers
-syn keyword clStorageClass	global __global local __local constant __constant private __private
+syn keyword clStorageClass      global __global local __local constant __constant private __private
 " function qualifiers
 syn keyword clStorageClass      kernel __kernel  __attribute__
 syn keyword clStorageClass      read_only __read_only write_only __write_only
@@ -27,21 +27,21 @@ syn keyword clStorageClass      complex imaginary
 syn keyword clType              bool uchar ushort uint ulong half quad
 
 " vector types
-syn keyword clType		char2 char3 char4 char8 char16
-syn keyword clType		uchar2 uchar3 uchar4 uchar8 uchar16
-syn keyword clType		short2 short3 short4 short8 short16
-syn keyword clType		ushort2 ushort3 ushort4 ushort8 ushort16
-syn keyword clType		int2 int3 int4 int8 int16
-syn keyword clType		uint2 uint3 uint4 uint8 uint16
-syn keyword clType		long2 long3 long4 long8 long16
-syn keyword clType		ulong2 ulong3 ulong4 ulong8 ulong16
-syn keyword clType		float2 float3 float4 float8 float16
-syn keyword clType		double2 double3 double4 double8 double16
+syn keyword clType              char2 char3 char4 char8 char16
+syn keyword clType              uchar2 uchar3 uchar4 uchar8 uchar16
+syn keyword clType              short2 short3 short4 short8 short16
+syn keyword clType              ushort2 ushort3 ushort4 ushort8 ushort16
+syn keyword clType              int2 int3 int4 int8 int16
+syn keyword clType              uint2 uint3 uint4 uint8 uint16
+syn keyword clType              long2 long3 long4 long8 long16
+syn keyword clType              ulong2 ulong3 ulong4 ulong8 ulong16
+syn keyword clType              float2 float3 float4 float8 float16
+syn keyword clType              double2 double3 double4 double8 double16
 syn keyword clType              half2 half3 half4 half8 half16
 
 " other types
 syn keyword clType              ptrdiff_t intptr_t uintptr_t
-syn keyword clType		image2d_t image3d_t sampler_t event_t
+syn keyword clType              image2d_t image3d_t sampler_t event_t
 
 " reserved types
 syn keyword clType              bool2 bool3 bool4 bool8 bool16
@@ -125,7 +125,7 @@ syn keyword clFunction          get_image_width get_image_height get_image_depth
 " explicit memory fence functions
 syn keyword clFunction          barrier mem_fence read_mem_fence write_mem_fence
 
-" async copies from global to local mem to and fro and prefetch
+" async copies from global to local mem to and for and prefetch
 syn keyword clFunction          async_work_group_copy async_work_group__strided_copy wait_group_events prefetch
 
 " atomic functions
@@ -143,11 +143,11 @@ syn keyword clConstant          CL_SNORM_INT8 CL_SNORM_INT16 CL_UNORM_INT8 CL_UN
 syn keyword clConstant          CLK_ADDRESS_NONE CLK_FILTER_NEAREST CLK_FILTER_LINEAR
 syn keyword clConstant          CLK_GLOBAL_MEM_FENCE CLK_LOCAL_MEM_FENCE
 
-hi def link clStorageClass	StorageClass
+hi def link clStorageClass      StorageClass
 hi def link clStructure         Structure
-hi def link clType		Type
-hi def link clVariable	        Identifier
-hi def link clConstant	        Constant
+hi def link clType              Type
+hi def link clVariable          Identifier
+hi def link clConstant          Constant
 hi def link clCast              Operator
 hi def link clFunction          Function
 hi def link clStatement         Statement
